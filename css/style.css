@@ -95,7 +95,6 @@ nav div ul li a:hover {
 }
 header {
   height: calc(100vh - 4rem);
-  background: url(/img/landing.jpg);
   background-size: cover;
   /* the most important thing which i didn't know the reason for not shown in github page */
   /* background: url(/img/landing.jpg); */

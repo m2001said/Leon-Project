@@ -1,0 +1,104 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  /* html {
+    /* 9px / 16px  */
+  /* font-size: 56.25%;
+  } */
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  .services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+    justify-content: center;
+  }
+  .services-img-back {
+    display: none;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 44em) {
+  .portfolio-section-back {
+    padding: 6rem 4rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .main-nav {
+    padding: 0.2rem;
+  }
+  .logo-nav {
+    width: 3rem;
+  }
+  .menu-icon {
+    width: 2rem;
+  }
+  .information-section,
+  .portfolio-section-back {
+    padding: 1.5rem 2rem;
+    /* margin-bottom: 6.4rem; */
+  }
+  .information-contents {
+    display: flex;
+    flex-direction: column;
+  }
+  .services-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+    /* text-align: center; */
+  }
+
+  .portfolio-contents {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.2rem; */
+  }
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    text-align: center;
+    /* justify-content: center; */
+  }
+  .about-img::after,
+  .about-img::before {
+    display: none;
+  }
+  .about-text hr {
+    width: 100%;
+  }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/

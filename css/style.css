@@ -1,0 +1,369 @@
+/* --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6; */
+/* - Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+/* which i use in the project */
+/* font=size :1.4rem 
+margin-bottom: 1rem;  for p
+margin-bottom: 6.4rem;  for sections
+padding: 6rem 10rem;
+gap: 2.4rem;
+line-height: 1.8; */
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+/* ------------------------ */
+/* The navigation bar */
+/* ------------------------ */
+.main-nav {
+  padding: 1rem;
+}
+.logo-nav {
+  width: 4rem;
+}
+.menu-icon {
+  width: 2.5rem;
+}
+.menu {
+  position: relative;
+}
+.menu:hover ul {
+  display: block;
+}
+/* align the menu and the logo */
+nav div {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px; */
+  background-color: #fff;
+}
+/* the ul which appear when you hover on the menu icon */
+nav div ul {
+  font-size: 1.4rem;
+  margin: 0;
+  position: absolute;
+  background-color: #f6f6f6;
+  list-style: none;
+  width: 15rem;
+  top: 3rem;
+  left: -13rem;
+  z-index: 20;
+  display: none;
+}
+/* decoration of the links in the menu icon */
+nav div ul li a {
+  text-decoration: none;
+  color: rgb(92, 90, 90);
+  padding: 1rem;
+  display: block;
+  transition: 0.3s;
+}
+/* border for all the li element and not to the last child */
+nav div ul li:not(:last-child) a {
+  border-bottom: 1px solid rgb(92, 90, 90);
+}
+nav div ul li a:hover {
+  padding-left: 2.5rem;
+}
+/* ------------------------ */
+/* The header */
+/* ------------------------ */
+.container {
+  margin: 0 auto;
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+}
+header {
+  height: calc(100vh - 4rem);
+  background: url(/img/landing.jpg);
+  background-size: cover;
+  /* background-size: contain; */
+  position: relative;
+}
+.words-on-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 25rem;
+}
+header h1 {
+  color: #10cab7;
+  margin-bottom: 1rem;
+}
+header p {
+  font-size: 1.4rem;
+  color: rgb(92, 90, 90);
+}
+/* ------------------------ */
+/* information section */
+/* ------------------------ */
+.information-section {
+  background-color: #e4e4e4;
+  padding: 6rem 10rem;
+  margin-bottom: 6.4rem;
+}
+.information-contents {
+  display: flex;
+  gap: 2.4rem;
+}
+.icon-info {
+  width: 4rem;
+  color: #10cab7;
+  margin-bottom: 1rem;
+}
+.information-contents h2,
+.information-contents p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+.information-contents p {
+  color: rgb(92, 90, 90);
+}
+.information-content {
+  text-align: center;
+}
+/* ------------------------ */
+/* Services section */
+/* ------------------------ */
+.services-section {
+  margin-bottom: 6.4rem;
+}
+.title-box {
+  text-align: center;
+}
+.title {
+  font-size: 7rem;
+  font-weight: 700;
+  color: #e4e4e4;
+  /* position: relative;   this is wrong , i used next selector*/
+  letter-spacing: -0.35rem;
+}
+/* to link any paragraph after the title class next selector */
+.title + p {
+  font-size: 1.4rem;
+  /* position: absolute;  this is wrong , i used next selector   */
+  color: rgb(133, 133, 133);
+  font-weight: 100;
+  margin-top: -2.5rem;
+  margin-bottom: 4rem;
+}
+/* i tried to make the caption by pcudo element ::after but there are many captions in the project  */
+/* .title::after {
+  content: "Don't be busy, be productive";
+  font-size: 14px;
+  position: absolute;
+  color: rgb(133, 133, 133);
+  font-weight: 100;
+  top: 72%;
+  left: 41%;
+  letter-spacing: 0px;
+} */
+.all-services-icon {
+  color: #10cab7;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.4rem;
+  text-align: center;
+}
+.services-content div h2 {
+  font-size: 1.4rem;
+  color: rgb(133, 133, 133);
+  margin-bottom: 1rem;
+}
+.services-content p {
+  color: rgb(133, 133, 133);
+  font-size: 1.2rem;
+}
+
+.icon-text {
+  /* width: 30rem; it is wrong you should use % not rem */
+  width: 100%;
+  height: 30%;
+  /* display: flex; */
+  /* gap: 1rem; */
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.services-img-back img {
+  width: 20rem;
+}
+.services-img-back {
+  margin-left: 5rem;
+  position: relative;
+}
+
+.services-img-back::after {
+  position: absolute;
+  content: "";
+  height: 33rem;
+  /* height: calc(100% + 50px); */
+  width: 6rem;
+  background-color: #15443f;
+  top: 50%;
+  /* right: 8%; */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* ------------------------ */
+/* portfolio section */
+/* ------------------------ */
+.portfolio-section-back {
+  background-color: #e4e4e4;
+  padding: 6rem 10rem;
+  margin-bottom: 6.4rem;
+}
+.portfolio-title {
+  color: #fff;
+}
+.portfolio-contents {
+  display: flex;
+  gap: 2.4rem;
+}
+.portfolio-content {
+  width: 100%;
+  background-color: #fff;
+}
+.portfolio-content-img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.portfolio-content p,
+.portfolio-content h2 {
+  font-size: 1.4rem;
+  padding: 0 2rem;
+}
+.portfolio-content h2 {
+  margin-bottom: 10px;
+}
+.portfolio-content p {
+  color: rgb(133, 133, 133);
+  padding-bottom: 2rem;
+}
+
+/* ------------------------ */
+/* about section */
+/* ------------------------ */
+.about-section {
+  margin-bottom: 6rem;
+}
+.about-content {
+  display: flex;
+  gap: 6rem;
+}
+.about-img img {
+  width: 20rem;
+}
+.about-img {
+  position: relative;
+}
+.about-img::after {
+  content: "";
+  height: 35rem;
+  width: 8rem;
+  background-color: #e4e4e4;
+  position: absolute;
+  left: -2rem;
+  top: -2.5rem;
+  z-index: -1;
+}
+.about-img::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 22rem;
+  border-left: 5rem solid#10cab7;
+  border-bottom: 5rem solid #10cab7;
+  top: -2.6rem;
+  right: -12.5rem;
+  z-index: -1;
+}
+.about-text p:first-of-type {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.about-text hr {
+  border: 1px solid #10cab7;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+.about-text p:last-of-type {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  color: #8b8b8b;
+}
+/* ------------------------ */
+/* contact section */
+/* ------------------------ */
+.contact-section {
+  background-color: #e4e4e4;
+  padding: 3rem 0;
+}
+.contact-title {
+  color: #fff;
+}
+.contact {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.contact-content {
+  text-align: center;
+}
+.contect-feel {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #15443f;
+  margin-bottom: 1rem;
+}
+.mail {
+  text-decoration: none;
+  color: #10cab7;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ------------------------ */
+/*footer */
+/* ------------------------ */
+footer {
+  text-align: center;
+  background-color: #15443f;
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+}
+footer span {
+  color: #10cab7;
+}
